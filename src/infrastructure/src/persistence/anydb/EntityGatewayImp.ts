@@ -1,7 +1,7 @@
-// Level 1 dependencies from domain
+// Layer 1 (yellow) dependencies from domain
 import { WidgetType, SaveWidgetEntityGatewayInt } from "../../../../domain/src/index";
 
-// Level 4 in infrastructure
+// Lives in Layer 4 (blue) in infrastructure
 export const saveWidgetEntityGatewayAnyDBImp: SaveWidgetEntityGatewayInt = widget => {
     return new Promise<WidgetType>((resolve: any, reject: any) => {
         // Implement DB code here

@@ -1,11 +1,11 @@
-// Level 1 dependencies from domain
+// Layer 1 (yellow) dependencies from domain
 import { SaveWidgetEntityGatewayInt } from "../../../domain/src/index"
-// Level 2 dependencies from usecase
+// Layer 2 (red) dependencies from usecase
 import { createWidgetInteractorConstructor, CreateWidgetInputBoundaryInt, CreateWidgetOutputBoundaryInt } from "../../../usecase/src/index"
-// Level 3 local dependencies from delivery
+// Layer 3 (green) local dependencies from delivery
 import { CreateWidgetRequestInt, CreateWidgetViewModelInt, createWidgetPresenterConstructor } from "../../../delivery/src/index"
 
-// Level 3 in delivery
+// Lives in Layer 3 (green) in delivery
 export const createWidgetControllerConstructor = (saveWidgetEntityGatewayImp: SaveWidgetEntityGatewayInt, createWidgetViewModelImp: CreateWidgetViewModelInt): CreateWidgetRequestInt => {
     const createWidgetRequestImp: CreateWidgetRequestInt = (widget) => {
         // widget moving from delivery down to usecase

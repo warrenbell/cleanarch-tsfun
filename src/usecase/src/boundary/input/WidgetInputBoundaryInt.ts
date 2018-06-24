@@ -1,5 +1,5 @@
-// Level 1 dependencies from domain
+// Layer 1 (yellow) dependencies from domain
 import { WidgetType } from "../../../../domain/src/index";
 
-// Level 2 in usecase
+// Lives in Layer 2 (red) in usecase
 export type CreateWidgetInputBoundaryInt = (widget: WidgetType) => void;

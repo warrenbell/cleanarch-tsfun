@@ -1,5 +1,5 @@
-// Level 1 local dependencies from domain
+// Layer 1 (yellow) local dependencies in domain
 import { WidgetType } from "../../../domain/src/index";
 
-// Level 1 in domain
+// Lives in Layer 1 (yellow) in domain
 export type  SaveWidgetEntityGatewayInt = (widget: WidgetType) => Promise<WidgetType>;

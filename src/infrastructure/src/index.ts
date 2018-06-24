@@ -1,4 +1,5 @@
-// This is where you could wire up different implementations of SaveWidgetEntityGatewayInt to different storage
-import { saveWidgetEntityGatewayAnyDBImp as saveWidgetEntityGatewayImp } from "./persistence/anydb/EntityGatewayImp";
+// Layer 4 (blue) local dependencies from infrastructure
+// This is were we can wire together different implementations of SaveWidgetEntityGatewayInt
+import { saveWidgetEntityGatewayAnyDBImp as saveWidgetEntityGatewayImp } from "./persistence/anydb/EntityGatewayImp"
 
 export { saveWidgetEntityGatewayImp };

@@ -1,10 +1,10 @@
-// Level 2 dependencies from usecase
+// Layer 2 (red) dependencies from usecase
 import { CreateWidgetOutputBoundaryInt } from "../../../usecase/src/index"
-// Level 3 local dependencies from delivery
+// Layer 3 (green) local dependencies from delivery
 import { CreateWidgetViewModelInt } from "../../../delivery/src/index"
 
 
-// Level 3 in delivery
+// Lives in Layer 3 (green) in delivery
 export const createWidgetPresenterConstructor = (createWidgetViewModelImp: CreateWidgetViewModelInt): CreateWidgetOutputBoundaryInt => {
     const createWidgetOutputBoundaryImp: CreateWidgetOutputBoundaryInt = (widget) => {
         // widget moving from usecase up to delivery
