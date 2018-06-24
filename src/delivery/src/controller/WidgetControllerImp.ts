@@ -8,6 +8,8 @@ import { CreateWidgetRequestInt, CreateWidgetViewModelInt, createWidgetPresenter
 // Level 3 in delivery
 export const createWidgetControllerConstructor = (saveWidgetEntityGatewayImp: SaveWidgetEntityGatewayInt, createWidgetViewModelImp: CreateWidgetViewModelInt): CreateWidgetRequestInt => {
     const createWidgetRequestImp: CreateWidgetRequestInt = (widget) => {
+        // widget moving from delivery down to usecase
+        // Data mapping or conversion of widget here
         const createWidgetOutputBoundaryImp: CreateWidgetOutputBoundaryInt = createWidgetPresenterConstructor(createWidgetViewModelImp);
         const createWidgetInputBoundaryImp: CreateWidgetInputBoundaryInt = createWidgetInteractorConstructor(saveWidgetEntityGatewayImp, createWidgetOutputBoundaryImp);
         createWidgetInputBoundaryImp(widget);
